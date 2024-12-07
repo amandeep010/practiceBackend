@@ -4,19 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "check": "npx prettier . --check",
-    "write": "npx prettier . --write",
     "start": "tsc && node dist/index.js",
     "dev": "nodemon src.index.ts",
-    "precommit": "npm run lint && npm test",
     "prepare": "husky"
   },
   "husky": {
-
    "hooks": {
-
-     "pre-commit": "npm run precommit" 
-
+     "pre-commit": "npm run prepare" 
    }
   },
    "lint-staged": {
