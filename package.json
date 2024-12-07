@@ -8,8 +8,20 @@
     "write": "npx prettier . --write",
     "start": "tsc && node dist/index.js",
     "dev": "nodemon src.index.ts",
+    "precommit": "npm run lint && npm test",
     "prepare": "husky"
   },
+  "husky": {
+
+   "hooks": {
+
+     "pre-commit": "npm run precommit" 
+
+   }
+  },
+   "lint-staged": {
+     "*.{ts,css,md}": "prettier --check"
+   },
   "author": "",
   "license": "ISC",
   "description": "",
@@ -27,8 +39,5 @@
     "husky": "^9.1.7",
     "lint-staged": "^15.2.10",
     "prettier": "^3.4.2"
-  },
-  "lint-staged": {
-    "*.{ts,css,md}": "prettier --write"
   }
 }
