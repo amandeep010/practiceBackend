@@ -1,6 +1,4 @@
-import express from "express"
-class ApiBase{
-    private router = express.Router()
-
+import express from "express";
+class ApiBase {
+  private router = express.Router();
 }
-

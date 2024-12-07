@@ -6,16 +6,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && node dist/index.js",
     "dev": "nodemon src.index.ts",
-    "prepare": "husky"
+    "prettier:list": "prettier \"{src,test}/**/*.{ts,js}\" --list-different",
+    "prettier:fix": "prettier \"{src,test}/**/*.{ts,js}\" --write"
   },
-  "husky": {
-   "hooks": {
-     "pre-commit": "npm run prepare" 
-   }
-  },
-   "lint-staged": {
-     "*.{ts,css,md}": "prettier --check"
-   },
   "author": "",
   "license": "ISC",
   "description": "",
@@ -30,8 +23,7 @@
   "devDependencies": {
     "@types/express": "^5.0.0",
     "git-format-staged": "^3.1.1",
-    "husky": "^9.1.7",
-    "lint-staged": "^15.2.10",
+    "husky": "^8.0.0",
     "prettier": "^3.4.2"
   }
 }
