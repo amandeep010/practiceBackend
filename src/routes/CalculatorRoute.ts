@@ -1,5 +1,5 @@
 import { Router } from "express";
-import CalculatorController from "../controllers/CalculatorController";
+import CalculatorController from "../controllers/CalculatorController.ts";
 
 class CalculatorRoute {
   public router = Router();
