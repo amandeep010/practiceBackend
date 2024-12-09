@@ -4,7 +4,7 @@ import CalculatorController from "../controllers/CalculatorController";
 class CalculatorRoute {
   public router = Router();
   constructor() {
-    this.router.post("/add", CalculatorController.add);
+    this.router.get("/add", CalculatorController.add);
   }
 }
 
