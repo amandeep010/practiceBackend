@@ -1,7 +1,7 @@
 import express from "express";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
-import router from "./routes/MainRoute";
+import router from "./routes/MainRoute.ts";
 
 dotenv.config();
 const app = express();
@@ -16,5 +16,3 @@ app.use("/route", router);
 app.listen(8000, () => {
   console.log("Server running");
 });
-
-export default app;
