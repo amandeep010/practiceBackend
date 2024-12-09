@@ -3,9 +3,9 @@ class Calculator {
   constructor() {
     this.add = this.add.bind(this);
   }
-  public add(req: Request, res: Response, next: NextFunction) {
+  public async add(req: Request, res: Response, next: NextFunction) {
     try {
-      res.send({ done: "good boi" });
+      res.status(200).send({ message: "good" });
     } catch (error) {
       next(error);
     }
